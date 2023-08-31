@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { EarthCanvas } from './canvas'
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { slideIn } from "../utils/motions";

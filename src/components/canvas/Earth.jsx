@@ -10,8 +10,8 @@ const Earth = ({ isMobile }) => {
   return (
       <primitive
         object={earth.scene}
-        scale={isMobile ? 1.5 : 2}
-        position={isMobile ? [0, -0.5, 0] : [0, -1, 0]}
+        scale={isMobile ? 1.3 : 1.75}
+        position={isMobile ? [0, -0.2, 0] : [0, -.7, 0]}
         rotation={[-0.01, -0.2, -0.1]}
       />
   );
@@ -21,7 +21,7 @@ const EarthCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia("(max-width: 600px)");
 
     setIsMobile(mediaQuery.matches);
 
