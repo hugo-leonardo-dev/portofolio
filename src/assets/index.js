@@ -24,6 +24,7 @@ import elite from './company/elite.png'
 import prefeitura from './company/prefeituraNatal.png'
 
 import portfolio from './works/portfolio.png'
+import whatsweb from './works/whatsweb.jpeg'
 
 export {
   logo,
@@ -47,5 +48,6 @@ export {
   mysql,
   elite,
   prefeitura,
-  portfolio
+  portfolio,
+  whatsweb
 };
