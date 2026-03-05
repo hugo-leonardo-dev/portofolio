@@ -121,7 +121,7 @@ const experiences = [
     company_name: "Corelab Software House",
     icon: corelab,
     iconBg: "#8d3cfd",
-    date: "July 2024 – Present",
+    date: "July 2025 – Present",
     points: [
       "Developed scalable applications using React.js, AdonisJS and PostgreSQL, adapting quickly to different business rules across multiple client projects.",
       "Built and maintained REST APIs and complex data models with AdonisJS and PostgreSQL, ensuring data integrity and high performance.",
