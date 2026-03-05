@@ -7,10 +7,10 @@ import { slideIn } from "../utils/motions";
 
 const Contact = () => {
   const formRef = useRef();
-  const [form, setForm] = useState ({
-    name: '',
-    email: '',
-    message: '',
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -18,17 +18,17 @@ const Contact = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    setForm({...form, [name]:value});
-  }
+    setForm({ ...form, [name]: value });
+  };
 
- const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
     emailjs
       .send(
-        'service_we3pheq',
-        'template_1q73xze',
+        "service_we3pheq",
+        "template_1q73xze",
         {
           from_name: form.name,
           to_name: "Hugo Leonardo",
@@ -36,12 +36,14 @@ const Contact = () => {
           to_email: "hugoleonardopflorencio@gmail.com",
           message: form.message,
         },
-        'xfT1IEu7QwZuOjRzO'
+        "xfT1IEu7QwZuOjRzO",
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thanks to make contact with me! I will get back to you as soon as possible.");
+          alert(
+            "Thanks to make contact with me! I will get back to you as soon as possible.",
+          );
 
           setForm({
             name: "",
@@ -54,19 +56,18 @@ const Contact = () => {
           console.error(error);
 
           alert("Something went wrong. Please try again.");
-        }
+        },
       );
   };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
-        variants={slideIn('left', "tween", 0.2, 1)}
+        variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Talk to me</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
-        
+        <h3 className={styles.sectionHeadText}>Contact</h3>
 
         <form
           ref={formRef}
@@ -75,7 +76,7 @@ const Contact = () => {
         >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
-            <input 
+            <input
               type="text"
               name="name"
               value={form.name}
@@ -86,7 +87,7 @@ const Contact = () => {
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
-            <input 
+            <input
               type="email"
               name="email"
               value={form.email}
@@ -98,7 +99,7 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
-              rows="7" 
+              rows="7"
               type="text"
               name="message"
               value={form.message}
@@ -111,12 +112,12 @@ const Contact = () => {
             type="submit"
             className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary"
           >
-            {loading ? 'Sending...' : 'Send!'}
+            {loading ? "Sending..." : "Send!"}
           </button>
         </form>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
 export default SectionWrapper(Contact, "contact");
