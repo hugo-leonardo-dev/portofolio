@@ -22,6 +22,7 @@ import {
   corelab,
   portfolio,
   whatsweb,
+  tonymendes,
 } from "../assets";
 
 export const navLinks = [
@@ -188,6 +189,31 @@ const projects = [
     ],
     image: portfolio,
     source_code_link: "https://github.com/hugo-leonardo-dev/portoflio",
+  },
+  {
+    name: "Motion Design Portfolio",
+    description:
+      "Portfolio focused on motion design and 3D projects. Features a public gallery to showcase work. Includes a private admin dashboard with authentication for content management.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nextjs",
+        color: "gray-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: tonymendes,
+    source_code_link: "https://tony-mendes.vercel.app/",
   },
   {
     name: "WhatsWeb",
