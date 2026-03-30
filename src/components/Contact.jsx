@@ -35,7 +35,7 @@ const ContactCard = ({ index, icon: Icon, title, info, link, color }) => (
       <div className="glassmorphism rounded-[20px] py-6 px-4 min-h-[280px] flex justify-evenly items-center flex-col relative overflow-hidden">
         {/* Subtle glow accent inside card */}
         <div 
-          className="absolute -top-10 -right-10 w-24 h-24 rounded-full blur-3xl opacity-30 group-hover:opacity-60 transition-opacity duration-300 z-0"
+          className="opacity-30 group-hover:opacity-60 transition-opacity duration-300 z-0"
           style={{ backgroundColor: color }}
         ></div>
         
