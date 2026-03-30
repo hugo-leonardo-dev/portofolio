@@ -197,7 +197,7 @@ const projects = [
     tags: [
       {
         name: "react",
-        color: "blue-text-gradient",
+        color: "cyan-text-gradient",
       },
       {
         name: "nextjs",
@@ -205,11 +205,11 @@ const projects = [
       },
       {
         name: "supabase",
-        color: "green-text-gradient",
+        color: "red-text-gradient",
       },
       {
         name: "tailwind",
-        color: "blue-text-gradient",
+        color: "pink-text-gradient",
       },
     ],
     image: tonymendes,
@@ -226,7 +226,7 @@ const projects = [
       },
     ],
     image: whatsweb,
-    source_code_link: "https://github.com/hugo-leonardo-dev/whatsweb",
+    source_code_link: "https://whatsweb-hugoleonardo.vercel.app",
   },
 ];
 

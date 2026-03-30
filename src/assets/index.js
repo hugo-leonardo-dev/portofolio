@@ -29,7 +29,7 @@ import corelab from "./company/corelab.jpeg";
 
 import portfolio from "./works/portfolio.png";
 import whatsweb from "./works/whatsweb.jpeg";
-import tonymendes from "./works/tony.png";
+import tonymendes from "./works/tony.jpeg";
 export {
   logo,
   web,

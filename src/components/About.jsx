@@ -8,10 +8,10 @@ import { SectionWrapper } from "../hoc";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
+    <Tilt className="xs:w-[250px] w-full group">
       <motion.div
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px]"
+        variants={fadeIn("up", "spring", 0.3 * index, 0.75)}
+        className="w-full p-[2px] rounded-[20px] shadow-card group-hover:shadow-glow transition-all duration-300"
       >
         <div
           options={{
@@ -19,10 +19,14 @@ const ServiceCard = ({ index, title, icon }) => {
             scale: 1,
             speed: 450,
           }}
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+          className="glassmorphism rounded-[20px] py-6 px-8 min-h-[280px] flex justify-evenly items-center flex-col relative overflow-hidden"
         >
-          <img src={icon} alt={title} className="2-16 h-16 object-contain" />
-          <h3 className="text-white text-[20px] font-bold text-center">
+          {/* Subtle neon accent inside card */}
+          <div className="absolute -top-10 -right-10 w-24 h-24 bg-neon-purple rounded-full blur-3xl opacity-30 group-hover:opacity-60 transition-opacity duration-300"></div>
+          
+          <img src={icon} alt={title} className="w-16 h-16 object-contain z-10 transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(0,243,255,0.8)]" />
+          
+          <h3 className="text-white text-[20px] font-bold text-center z-10 tracking-wider">
             {title}
           </h3>
         </div>
@@ -40,7 +44,7 @@ const About = () => {
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[32px] tracking-wide"
       >
         Fullstack Developer with hands-on experience building scalable web
         applications across diverse industries — from fintech and SaaS platforms
@@ -50,8 +54,8 @@ const About = () => {
         AWS.
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((services, index) => (
-          <ServiceCard key={services.title} index={index} {...services} />
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
     </>
