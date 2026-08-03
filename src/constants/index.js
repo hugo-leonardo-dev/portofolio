@@ -22,6 +22,7 @@ import {
   corelab,
   portfolio,
   whatsweb,
+  gamenexus,
   tonymendes,
 } from "../assets";
 
@@ -214,6 +215,27 @@ const projects = [
     ],
     image: tonymendes,
     source_code_link: "https://tony-mendes.vercel.app/",
+  },
+  {
+    name: "Game Nexus",
+    description:
+      "A collaborative web platform for managing shared video game backlogs. Features a Kanban-style board for organizing games by status and real time price updates for each game.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "gray-text-gradient",
+      },
+      {
+        name: "prisma",
+        color: "green-text-gradient",
+      },
+      {
+        name: "postgresql",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: gamenexus,
+    source_code_link: "https://gamenexus-blush.vercel.app",
   },
   {
     name: "WhatsWeb",

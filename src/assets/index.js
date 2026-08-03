@@ -29,6 +29,7 @@ import corelab from "./company/corelab.jpeg";
 
 import portfolio from "./works/portfolio.png";
 import whatsweb from "./works/whatsweb.jpeg";
+import gamenexus from "./works/gamenexus.png";
 import tonymendes from "./works/tony.jpeg";
 export {
   logo,
@@ -60,4 +61,5 @@ export {
   portfolio,
   whatsweb,
   tonymendes,
+  gamenexus,
 };
